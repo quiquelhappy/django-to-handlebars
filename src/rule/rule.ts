@@ -1,3 +1,4 @@
+import { BLOCK } from "./defaults/block"
 import { COMMENT } from "./defaults/comment"
 import { IF } from "./defaults/If"
 import { INCLUDE } from "./defaults/include"
@@ -20,4 +21,4 @@ export type ruleGroup = {
     rules: rule[],
 }
 
-export const DEFAULTS: ruleGroup[] = [COMMENT, IF, INCLUDE, ITERATOR, VARIABLE]
+export const DEFAULTS: ruleGroup[] = [BLOCK, COMMENT, IF, INCLUDE, ITERATOR, VARIABLE]
