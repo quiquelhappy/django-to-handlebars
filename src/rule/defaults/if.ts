@@ -1,10 +1,14 @@
 import { rule, ruleGroup } from "../rule";
 
+/**
+ * TODO: complex conditions with https://github.com/leapfrogtechnology/just-handlebars-helpers
+ */
+
 const IF_START: rule = {
     regex: /{%\s*if\s{1,}([a-zA-Z0-9_]*(?:\.[\w]+)*\s*)%}/g,
     replace: new Map()
-        .set(/{%\s*/g, '{{#')
-        .set(/\s*%}/g, '}}')
+        .set(/{%\s*/, '{{#')
+        .set(/\s*%}/, '}}')
 }
 
 const IF_ELSE: rule = {
