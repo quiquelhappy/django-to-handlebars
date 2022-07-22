@@ -1,4 +1,4 @@
-import { rule } from "../rule";
+import { rule, ruleGroup } from "../rule";
 
 const SINGLE_LINE: rule = {
     regex: /{#\s*(.*)\s*#}/g,
@@ -19,4 +19,6 @@ const MULTI_LINE_END: rule = {
         .set(/.*/, ' --}}')
 }
 
-export const COMMENT = [SINGLE_LINE, MULTI_LINE_START, MULTI_LINE_END]
+export const COMMENT: ruleGroup = {
+    rules: [SINGLE_LINE, MULTI_LINE_START, MULTI_LINE_END]
+}
